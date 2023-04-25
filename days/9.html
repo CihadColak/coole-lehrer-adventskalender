@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Tag 8</title>
+  </head>
+  <body>
+    <h2>9. Türchen:</h2>
+    <h4>Ein lustiger Lehrerwitz:</h4>
+    <p>
+      Sportlehrer: Ja heute machen wir Dehnübungen.
+      <br />
+      Deutschlehrerin: Es heißt die Übungen!
+    </p>
+
+    <h2>Mich-mit-Lehrerkram-Vollreden-dürfen-Gutschein-Generator</h2>
+    <p id="leField">Code:</p>
+    <button id="leButton" type="button" style="margin-bottom: 4px">
+      Klich mich1
+    </button>
+
+    <img
+      src="https://i.ebayimg.com/images/g/JcAAAOSwwnlfJrEA/s-l500.jpg"
+      alt="reading dog"
+    />
+  </body>
+  <script>
+    function makeid(length) {
+      let result = "";
+      const characters =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      const charactersLength = characters.length;
+      let counter = 0;
+      while (counter < length) {
+        result += characters.charAt(
+          Math.floor(Math.random() * charactersLength)
+        );
+        counter += 1;
+      }
+      return result;
+    }
+    document.getElementById("leButton").onclick = function (e) {
+      document.getElementById("leField").innerHTML = "Code: " + makeid(8);
+    };
+  </script>
+</html>
